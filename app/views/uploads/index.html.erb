@@ -1,0 +1,13 @@
+<div class="titleB">
+  <span><%= t('.uploads_in_archive', :archive => @archive.title) %></span>
+</div>
+<div>
+  <% if !@uploads.blank? %>
+    <% @uploads.each do |upload| %>
+      <%= link_to (upload.title.blank? ? upload.upload_file_name : upload.title), archive_upload_path(@archive, upload), { :title => upload.title } %>
+    <% end %>
+  <% else %>
+    <%= t '.no_uploads_yet' %>
+  <% end %>
+</div>
+

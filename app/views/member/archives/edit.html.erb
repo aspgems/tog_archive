@@ -1,0 +1,32 @@
+<% content_for :sidebar do %>
+  <div class="portlet portletD" id="portlet_userWall">
+    <h2><span><%= t '.your_archives' %></span></h2>
+      <div class="portlet_content">
+        <%= link_to t('.upload_files'), new_member_archive_upload_url(@archive), {:class => 'add', :title => t('.upload_files')} %>
+      </div>    
+  </div>
+<% end %>
+
+<p><%= link_to t('.your_archives'), member_archives_url %></p>
+
+<%= error_messages_for :archive %>
+
+<% form_for :archive, :url => member_archive_path(@archive), :html => {:id => "settings", :method => "put"} do |f| -%>
+
+  <fieldset>
+    <div class="fields">
+       <p><label><%= t '.title' %></label> <%= f.text_field :title, {:class => "fieldbox", :size => "40"} %></p>
+
+       <p><label><%= t '.description' %></label> <%= f.text_area :description, :class => 'fieldbox wide' %></p>
+
+       <p><label><%= t '.tag_list' %></label> <%= f.text_field :tag_list, {:class => "fieldbox", :size => "40"} %></p>
+
+       <p><label><%= t '.privacy' %></label><%= f.select :privacy, privacy_select_options %></p>
+
+    </div>
+  </fieldset>
+  <br />
+  <div class="actions">
+    <%= submit_tag t('.update'), :class => "button mainaction" %>
+  </div>
+<% end -%>

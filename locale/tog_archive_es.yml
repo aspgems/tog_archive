@@ -1,0 +1,84 @@
+es:
+  interface:
+    site:
+      archives: Archivos
+    member:
+      archives: Archivos
+  archives:
+    index:
+      title: Título
+      create_archive: Crear carpeta
+      no_archives_found: Aún no hay carpetas
+      created_by: Creado por
+      uploads: Ficheros
+    messages:
+      created: Carpeta creada con éxito
+  uploads:
+    index:
+      uploads_in_archive: Ficheros en la carpeta {{archive}}
+      no_uploads_found: Esta carpeta no contiene ficheros
+    show:
+      tags: Tags
+      download: Descargar
+  member:
+    archives:
+      new:
+        your_archives: Tus carpetas
+        upload_files: Subir ficheros
+        title: Título
+        description: Descripción
+        tag_list: Tags (separadas por ,)
+        public: Público
+        friends: Amigos
+        private: Privado
+        create: Crear carpeta
+        privacy: Privacidad
+      edit:
+        your_archives: Tus carpetas
+        upload_files: Subir ficheros
+        title: Título
+        description: Descripción
+        tag_list: Tags (separadas por ,)
+        public: Público
+        friends: Amigos
+        private: Privado
+        update: Guardar carpeta
+        privacy: Privacidad
+      index:
+        your_archives: Tus carpetas
+        title: Título
+        create_archive: Crear carpeta
+        upload_files: Subir ficheros
+        no_archives_found: Aún no hay carpetas
+        created_by: Creado por
+        uploads: Ficheros
+        edit: Editar
+        archives_to_of: Mostrando archivos {{start}} a {{end}} de {{total}}
+    uploads:
+      new:
+        description: Descripción
+        upload_files: Subir ficheros
+        your_archives: Tus carpetas
+        upload: Subir
+        tags: Tags (separadas por ,)
+        title: Nombre
+        file: Fichero
+      index:
+        your_archive: "Tu carpeta: {{archive}}"
+        your_uploads: Tus ficheros
+        uploads_to_of: Mostrando ficheros {{start}} a {{end}} de {{total}}
+        create_upload: Subir fichero
+        edit: Editar
+        delete: Eliminar
+        no_uploads_found: Aún no tienes ningún fichero
+      edit:
+        description: Descripción
+        upload_files: Subir ficheros
+        your_archives: Tus carpetas
+        save: Guardar
+        tags: Tags (separadas por ,)
+        title: Nombre
+        file: Fichero
+      messages: 
+        created: Fichero guardado con éxito
+        deleted: Fichero eliminado con éxito

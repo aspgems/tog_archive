@@ -1,0 +1,28 @@
+<div class="portlet portletH" id="portlet_groups">
+  <h2><span><%= t 'interface.site.archives' %></span></h2>
+  <p><%= link_to t('.create_archive'), new_member_archive_path, :class => 'button add' %></p> 
+  <br/>   
+  <div class="portlet_content">
+    <ul>
+      <% if @archives.blank? %>
+        <li class="clearfix"><%= t '.no_archives_found' %></li>
+      <% else %>          
+        <% @archives.each do |archive| %>
+          <li class="clearfix">
+            <div class="image">
+              <%= link_to icon_for_profile(archive.owner.profile, 'small'), profile_path(archive.owner.profile), :title => archive.owner.profile.full_name %>
+            </div> 
+            <div class="title"><%= link_to "#{sanitize textilize(archive.title)}", archive_uploads_path(archive), :title => "#{sanitize(archive.title)}" %></div>
+            <div class="text">
+              <%= t '.created_by' %> <%= link_to archive.owner.profile.full_name, profile_url(archive.owner.profile) %>
+              <br/>
+              <%= archive.description %>
+            </div>
+            <div class="members"><strong><%= archive.uploads.count %> <%= t '.uploads' %></strong></div>
+          </li>          
+        <% end %> 
+      <% end %>         
+    </ul>
+  </div>    
+</div>
+<%= will_paginate @archives %>

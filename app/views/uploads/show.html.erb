@@ -1,0 +1,22 @@
+<div class="titleB"><%= @upload.title.blank? ? @upload.upload_file_name : @upload.title %></div>
+
+<div>
+  <div>
+    <%= link_to t('.download'), @upload.upload.path, { :title => @upload.title } %>
+  </div>
+  <br />
+  <p><%= @upload.description %></p>
+  <p>
+    <%= t('.tags') %>
+    <% @upload.tag_counts.each do |tag| %>
+      <%= link_to tag, tags_archive_uploads_path(:tag => tag) %>
+    <% end %>
+  </p>
+
+  <div class="portlet portletI">
+    <h2><span><%= I18n.t('tog_core.site.voting.voting') %></span></h2>
+    <%= render :partial => "shared/voting", :locals => { :voteable => @upload } %>
+  </div>
+  <%= render :partial => "shared/comments", :locals => { :commentable => @upload } %>
+
+</div>

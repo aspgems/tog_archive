@@ -1,0 +1,36 @@
+<p><%= link_to t('.create_archive'), new_member_archive_url, {:class => "add button", :title => t('.create_archive')} -%></p>
+
+<div class="portlet portletB">
+  <h2><span><%= t '.your_archives' %></span></h2>
+  <div class="portlet_content">	
+    <ul>
+      <% if @archives.empty? %>
+        <li><%= t '.no_archives_found' %></li>
+      <% else %>
+        <% @archives.each do |archive| %>
+          <li class="clearfix">
+            <p>
+              <%= link_to h(archive.title), member_archive_uploads_path(archive) %>
+              <%= link_to t('.edit'), edit_member_archive_path(archive), {:title => t('.edit')} %>
+              <%= link_to t('.upload_files'), new_member_archive_upload_url(archive), {:title => t('.upload_files')} %>
+            </p>
+            <p><%= archive.description %></p>
+          </li>                            
+        <% end %>
+      <% end %>	
+    </ul>
+  </div>    
+</div>
+<% if !@archives.empty? %>
+  <div class="info_results">
+    <span class="info_items">
+      <%= t('.archives_to_of',
+             :start => (@archives.size > 0 ? (@archives.offset + 1) : '0'),
+             :end   => (@archives.size + @archives.offset),
+             :total => @archives.total_entries) %>
+    </span>
+    <span class="pages_navigation right">
+      <%= will_paginate @archives %>
+    </span>
+  </div>
+<% end %>

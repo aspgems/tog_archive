@@ -1,0 +1,84 @@
+en:
+  interface:
+    site: 
+      archives: Archives
+    member: 
+      archives: Archives
+  archives:
+    index:
+      title: Title
+      create_archive: Create archive
+      no_archives_found: No archives yet
+      created_by: Created by
+      uploads: Files
+    messages:
+      created: Archive successfully created
+  uploads:
+    index:
+      uploads_in_archive: Files in {{archive}}
+      no_uploads_found: There are no uploads yet
+    show:
+      tags: Tags
+      download: Download
+  member:
+    archives:
+      new:
+        your_archives: Your archives
+        upload_files: Upload files
+        title: Title
+        description: Description
+        tag_list: Tags (separated by ,)
+        public: Public
+        friends: Friends
+        private: Private
+        create: Create archive
+        privacy: Privacy
+      edit:
+        your_archives: Your archives
+        upload_files: Upload files
+        title: Title
+        description: Description
+        tag_list: Tags (separated by ,)
+        public: Public
+        friends: Friends
+        private: Private
+        update: Save archive
+        privacy: Privacy
+      index:
+        your_archives: Your archives
+        title: Title
+        create_archive: Create archive
+        upload_files: Upload files
+        no_archives_found: No archives yet
+        created_by: Created by
+        uploads: Files
+        edit: Edit
+        archives_to_of: Showing archives {{start}} to {{end}} of {{total}}
+    uploads:
+      new:
+        description: Description
+        upload_files: Upload files
+        your_archives: Your archives
+        upload: Upload
+        tags: Tags (separated by ,)
+        title: Title
+        file: File
+      index:
+        your_archive: "Your archive: {{archive}}"
+        your_uploads: Your files
+        uploads_to_of: Showing files {{start}} to {{end}} of {{total}}
+        create_upload: Upload file
+        edit: Edit
+        delete: Delete
+        no_uploads_found: "You don't have any files yet"
+      edit:
+        description: Description
+        upload_files: Upload files
+        your_archives: Your archives
+        save: Save
+        tags: Tags (separated by ,)
+        title: Title
+        file: File
+      messages:
+        created: File successfully saved
+        deleted: File successfully removed

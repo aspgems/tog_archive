@@ -1,0 +1,38 @@
+<p><%= link_to t('.create_upload'), new_member_archive_upload_url(@archive), {:class => "add button", :title => t('.create_upload')} -%></p>
+
+<div class="portlet portletB">
+  <h2><span><%= t '.your_uploads' %></span></h2>
+  <div class="portlet_content">	
+    <ul>
+      <% if @uploads.empty? %>
+        <li><%= t '.no_uploads_found' %></li>
+      <% else %>
+        <% @uploads.each do |upload| %>
+          <li class="clearfix">
+            <div>
+              <%= link_to h(upload.title.blank? ? upload.upload_file_name : upload.title), upload.upload.url %>
+              <%= link_to t('.edit'), edit_member_archive_upload_path(@archive, upload), {:title => t('.edit')} %>
+              <% form_tag member_archive_upload_path(@archive, upload), :method => :delete do %>
+                <%= submit_tag t('.delete'), :type => 'image', :src => '/tog_core/images/ico/delete.gif' %> <%= t('.delete') %>
+              <% end %>
+            </div>
+            <p><%= upload.description %></p>
+          </li>                            
+        <% end %>
+      <% end %>	
+    </ul>
+  </div>    
+</div>
+<% if !@uploads.empty? %>
+  <div class="info_results">
+    <span class="info_items">
+      <%= t('.uploads_to_of',
+             :start => (@uploads.size > 0 ? (@uploads.offset + 1) : '0'),
+             :end   => (@uploads.size + @uploads.offset),
+             :total => @uploads.total_entries) %>
+    </span>
+    <span class="pages_navigation right">
+      <%= will_paginate @uploads %>
+    </span>
+  </div>
+<% end %>
