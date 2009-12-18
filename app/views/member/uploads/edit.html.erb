@@ -4,7 +4,7 @@
 
 <%= error_messages_for :upload %>
 
-<% form_for @upload, :url => member_archive_uploads_path(@archive), :html => {:id => "entry", :multipart => true, :method => :put} do |f| -%>
+<% form_for @upload, :url => member_archive_upload_path(@archive, @upload), :html => {:id => "entry", :multipart => true, :method => :put} do |f| -%>
   <fieldset>
     <div class="fields">
       <p><label><%= t '.title' %></label> <%= f.text_field :title, {:class => "fieldbox", :size => '30'} %></p>

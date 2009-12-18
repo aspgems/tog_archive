@@ -7,7 +7,7 @@
       <%= link_to (upload.title.blank? ? upload.upload_file_name : upload.title), archive_upload_path(@archive, upload), { :title => upload.title } %>
     <% end %>
   <% else %>
-    <%= t '.no_uploads_yet' %>
+    <%= t '.no_uploads_found' %>
   <% end %>
 </div>
 

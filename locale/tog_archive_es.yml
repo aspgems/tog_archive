@@ -11,8 +11,6 @@ es:
       no_archives_found: Aún no hay carpetas
       created_by: Creado por
       uploads: Ficheros
-    messages:
-      created: Carpeta creada con éxito
   uploads:
     index:
       uploads_in_archive: Ficheros en la carpeta {{archive}}
@@ -54,6 +52,11 @@ es:
         uploads: Ficheros
         edit: Editar
         archives_to_of: Mostrando archivos {{start}} a {{end}} de {{total}}
+      messages:
+        created: Carpeta creada con éxito
+        updated: Carpeta actualizada con éxito
+        error_on_create: Ha ocurrido un error al guardar la carpeta
+        error_on_update: Ha ocurrido un error al guardar la carpeta
     uploads:
       new:
         description: Descripción
@@ -82,3 +85,7 @@ es:
       messages: 
         created: Fichero guardado con éxito
         deleted: Fichero eliminado con éxito
+        updated: Fichero actualizado con éxito
+        error_on_create: Ha ocurrido un error al crear el fichero
+        error_on_update: Ha ocurrido un error al actualizar el fichero
+        error_on_delete: Ha ocurrido un error al borrar el fichero

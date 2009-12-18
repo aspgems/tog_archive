@@ -11,8 +11,6 @@ en:
       no_archives_found: No archives yet
       created_by: Created by
       uploads: Files
-    messages:
-      created: Archive successfully created
   uploads:
     index:
       uploads_in_archive: Files in {{archive}}
@@ -54,6 +52,13 @@ en:
         uploads: Files
         edit: Edit
         archives_to_of: Showing archives {{start}} to {{end}} of {{total}}
+      messages:
+        created: Archive successfully created
+        updated: Archive successfully updated
+        deleted: Archive successfully removed
+        error_on_create: Your archive could not be saved
+        error_on_update: Your archive could not be updated
+        error_on_delete: Your archive could not be deleted
     uploads:
       new:
         description: Description
@@ -82,3 +87,7 @@ en:
       messages:
         created: File successfully saved
         deleted: File successfully removed
+        updated: File successfully updated
+        error_on_create: An error occured while creating your file
+        error_on_update: An error occured while updating your file
+        error_on_delete: An error occured while removing your file
