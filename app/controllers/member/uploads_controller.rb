@@ -16,6 +16,7 @@ class Member::UploadsController < Member::BaseController
 
   def create
     @upload = @archive.uploads.build(params[:upload])
+    @upload.user = current_user
     respond_to do |format|
       if @upload.save
         format.html do
@@ -67,7 +68,7 @@ class Member::UploadsController < Member::BaseController
 
   private
     def find_archive
-      @archive = Archive.find(params[:archive_id])
+      @archive = current_user.archives.find(params[:archive_id])
     end
 
 end
