@@ -23,25 +23,11 @@ es:
       new:
         your_archives: Tus carpetas
         upload_files: Subir ficheros
-        title: Título
-        description: Descripción
-        tag_list: Tags (separadas por ,)
-        public: Público
-        friends: Amigos
-        private: Privado
         create: Crear carpeta
-        privacy: Privacidad
       edit:
         your_archives: Tus carpetas
         upload_files: Subir ficheros
-        title: Título
-        description: Descripción
-        tag_list: Tags (separadas por ,)
-        public: Público
-        friends: Amigos
-        private: Privado
         update: Guardar carpeta
-        privacy: Privacidad
       index:
         your_archives: Tus carpetas
         title: Título
@@ -52,20 +38,26 @@ es:
         uploads: Ficheros
         edit: Editar
         archives_to_of: Mostrando archivos {{start}} a {{end}} de {{total}}
+      form:
+        title: Título
+        description: Descripción
+        tag_list: Tags (separadas por ,)
+        privacy: Privacidad
+        public: Público
+        friends: Amigos
+        private: Privado
       messages:
         created: Carpeta creada con éxito
         updated: Carpeta actualizada con éxito
+        deleted: Carpeta eliminada con éxito
         error_on_create: Ha ocurrido un error al guardar la carpeta
         error_on_update: Ha ocurrido un error al guardar la carpeta
+        error_on_delete: Ha ocurrido un error al guardar la carpeta
     uploads:
       new:
-        description: Descripción
         upload_files: Subir ficheros
         your_archives: Tus carpetas
         upload: Subir
-        tags: Tags (separadas por ,)
-        title: Nombre
-        file: Fichero
       index:
         your_archive: "Tu carpeta: {{archive}}"
         your_uploads: Tus ficheros
@@ -75,12 +67,13 @@ es:
         delete: Eliminar
         no_uploads_found: Aún no tienes ningún fichero
       edit:
-        description: Descripción
         upload_files: Subir ficheros
         your_archives: Tus carpetas
         save: Guardar
+      form:
         tags: Tags (separadas por ,)
         title: Nombre
+        description: Descripción
         file: Fichero
       messages: 
         created: Fichero guardado con éxito

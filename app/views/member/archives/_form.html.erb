@@ -1,0 +1,12 @@
+<fieldset>
+  <div class="fields">
+    <p><label><%= t '.title' %></label> <%= f.text_field :title, {:class => "fieldbox", :size => "40"} %></p>
+
+    <p><label><%= t '.description' %></label> <%= f.text_area :description, :class => 'fieldbox wide' %></p>
+
+    <p><label><%= t '.tag_list' %></label> <%= f.text_field :tag_list, {:class => "fieldbox", :size => "40"} %></p>
+
+    <p><label><%= t '.privacy' %></label><%= f.select :privacy, privacy_select_options %></p>
+
+  </div>
+</fieldset>

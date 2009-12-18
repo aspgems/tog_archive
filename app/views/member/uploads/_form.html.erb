@@ -1,0 +1,8 @@
+<fieldset>
+  <div class="fields">
+    <p><label><%= t '.title' %></label> <%= f.text_field :title, {:class => "fieldbox", :size => '30'} %></p>
+    <p><label><%= t '.description' %></label> <%= f.text_area :description, :class => "fieldbox wide" %></p>
+    <p><label><%= t '.file' %></label> <%= f.file_field :upload, :class => "fieldbox", :size => '20' %></p>
+    <p><label><%= t '.tags' %></label> <%= f.text_field :tag_list, {:class => "fieldbox", :size => "40"} %></p>
+  </div>
+</fieldset>

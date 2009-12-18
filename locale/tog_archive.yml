@@ -23,25 +23,11 @@ en:
       new:
         your_archives: Your archives
         upload_files: Upload files
-        title: Title
-        description: Description
-        tag_list: Tags (separated by ,)
-        public: Public
-        friends: Friends
-        private: Private
         create: Create archive
-        privacy: Privacy
       edit:
         your_archives: Your archives
         upload_files: Upload files
-        title: Title
-        description: Description
-        tag_list: Tags (separated by ,)
-        public: Public
-        friends: Friends
-        private: Private
         update: Save archive
-        privacy: Privacy
       index:
         your_archives: Your archives
         title: Title
@@ -52,6 +38,14 @@ en:
         uploads: Files
         edit: Edit
         archives_to_of: Showing archives {{start}} to {{end}} of {{total}}
+      form:
+        title: Title
+        description: Description
+        tag_list: Tags (separated by ,)
+        privacy: Privacy
+        public: Public
+        friends: Friends
+        private: Private
       messages:
         created: Archive successfully created
         updated: Archive successfully updated
@@ -61,13 +55,9 @@ en:
         error_on_delete: Your archive could not be deleted
     uploads:
       new:
-        description: Description
         upload_files: Upload files
         your_archives: Your archives
         upload: Upload
-        tags: Tags (separated by ,)
-        title: Title
-        file: File
       index:
         your_archive: "Your archive: {{archive}}"
         your_uploads: Your files
@@ -77,12 +67,13 @@ en:
         delete: Delete
         no_uploads_found: "You don't have any files yet"
       edit:
-        description: Description
         upload_files: Upload files
         your_archives: Your archives
         save: Save
+      form:
         tags: Tags (separated by ,)
         title: Title
+        description: Description
         file: File
       messages:
         created: File successfully saved

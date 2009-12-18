@@ -5,16 +5,7 @@
 <%= error_messages_for :upload %>
 
 <% form_for @upload, :url => member_archive_upload_path(@archive, @upload), :html => {:id => "entry", :multipart => true, :method => :put} do |f| -%>
-  <fieldset>
-    <div class="fields">
-      <p><label><%= t '.title' %></label> <%= f.text_field :title, {:class => "fieldbox", :size => '30'} %></p>
-      <p><label><%= t '.description' %></label> <%= f.text_area :description, :class => "fieldbox wide" %></p>
-      <p><label><%= t '.file' %></label> <%= f.file_field :upload, :class => "fieldbox" %></p>
-      <p><label><%= t '.tags' %></label> <%= f.text_field :tag_list, {:class => "fieldbox", :size => "40"} %></p>
-    </div>
-  </fieldset>
-
-  <br />
+  <%= render :partial => 'form', :locals => { :f => f } %>
   <div class="actions">
     <%= submit_tag t('.save'), :class => "button mainaction" %>
   </div>

@@ -13,19 +13,8 @@
 
 <% form_for :archive, :url => member_archive_path(@archive), :html => {:id => "settings", :method => "put"} do |f| -%>
 
-  <fieldset>
-    <div class="fields">
-       <p><label><%= t '.title' %></label> <%= f.text_field :title, {:class => "fieldbox", :size => "40"} %></p>
+  <%= render :partial => 'form', :locals => { :f => f } %>
 
-       <p><label><%= t '.description' %></label> <%= f.text_area :description, :class => 'fieldbox wide' %></p>
-
-       <p><label><%= t '.tag_list' %></label> <%= f.text_field :tag_list, {:class => "fieldbox", :size => "40"} %></p>
-
-       <p><label><%= t '.privacy' %></label><%= f.select :privacy, privacy_select_options %></p>
-
-    </div>
-  </fieldset>
-  <br />
   <div class="actions">
     <%= submit_tag t('.update'), :class => "button mainaction" %>
   </div>
