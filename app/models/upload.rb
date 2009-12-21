@@ -11,4 +11,16 @@ class Upload < ActiveRecord::Base
   validates_attachment_presence :upload
 
   delegate :can_be_read_by?, :to => :archive
+
+  define_index do
+    indexes title
+    indexes description
+    indexes upload_file_name
+    has archive(:privacy), :as => :privacy
+  end
+
+  def self.site_search(query, options={})
+    self.search query, :with => { :privacy => Archive::PUBLIC }
+  end
+
 end
