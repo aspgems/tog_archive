@@ -9,3 +9,5 @@ Tog::Interface.sections(:site).add 'archives', '/archives'
 Tog::Interface.sections(:member).add 'archives', '/member/archives' 
 
 Tog::Search.sources << 'Upload'
+
+Tog::Plugins.settings :tog_archive, { 'search.skip_indices' => false }

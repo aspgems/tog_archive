@@ -12,15 +12,17 @@ class Upload < ActiveRecord::Base
 
   delegate :can_be_read_by?, :to => :archive
 
-  define_index do
-    indexes title
-    indexes description
-    indexes upload_file_name
-    has archive(:privacy), :as => :privacy
-  end
+  unless Tog::Plugins.settings(:tog_archive, 'search.skip_indices')
+    define_index do
+      indexes title
+      indexes description
+      indexes upload_file_name
+      has archive(:privacy), :as => :privacy
+    end
 
-  def self.site_search(query, options={})
-    self.search query, :with => { :privacy => Archive::PUBLIC }
+    def self.site_search(query, options={})
+      self.search query, :with => { :privacy => Archive::PUBLIC }
+    end
   end
 
 end
